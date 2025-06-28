@@ -1,5 +1,5 @@
 [project]
-name = "$DOMAIN"
+name = "e3dc"
 version = "0.0.0"
 dependencies = ["colorlog", "homeassistant==2025.4.4"]
 requires-python = ">=3.13"

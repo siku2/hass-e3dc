@@ -1,6 +1,6 @@
 {
-    "name": "$NAME",
-    "filename": "$DOMAIN.zip",
+    "name": "E3/DC",
+    "filename": "e3dc.zip",
     "hide_default_branch": true,
     "homeassistant": "2025.4.4",
     "render_readme": true,
