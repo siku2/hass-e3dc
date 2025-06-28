@@ -6,36 +6,33 @@
     "runArgs": [
         "--network=host",
     ],
-    "postCreateCommand": "scripts/setup.sh",
+    "postCreateCommand": ".devcontainer/install.sh",
     "customizations": {
         "vscode": {
             "extensions": [
                 "charliermarsh.ruff",
                 "DavidAnson.vscode-markdownlint",
                 "eamodio.gitlens",
+                "foxundermoon.shell-format",
                 "github.vscode-pull-request-github",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "ryanluker.vscode-coverage-gutters",
                 "tamasfe.even-better-toml",
                 "tekumara.typos-vscode",
+                "timonwong.shellcheck",
                 "yzhang.markdown-all-in-one",
             ],
             "settings": {
+                "remote.autoForwardPorts": false, // Causes problems with host network.
+                "python.analysis.languageServerMode": "full",
+                "python.formatting.provider": "none",
                 "[markdown]": {
                     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
                 },
                 "[python]": {
                     "editor.defaultFormatter": "charliermarsh.ruff"
                 },
-                "files.eol": "\n",
-                "python.analysis.autoSearchPaths": false,
-                "python.analysis.diagnosticSeverityOverrides": {
-                    "reportMissingTypeStubs": "none"
-                },
-                "python.formatting.provider": "none",
-                "python.pythonPath": "/usr/bin/python3",
-                "remote.autoForwardPorts": false, // Causes problems with host network.
             }
         }
     },

@@ -14,9 +14,13 @@
     "integration_type": "device",
     "iot_class": "local_polling",
     "issue_tracker": "https://github.com/siku2/hass-e3dc/issues",
-    "loggers": [],
+    "loggers": [
+        "pymodbus"
+    ],
     "mqtt": [],
-    "requirements": [],
+    "requirements": [
+        "pymodbus"
+    ],
     "ssdp": [],
     "usb": [],
     "version": "0.0.0",

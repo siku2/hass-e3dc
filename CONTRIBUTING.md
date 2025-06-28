@@ -45,6 +45,7 @@ People *love* thorough bug reports. I'm not even kidding.
 ## Use a Consistent Coding Style
 
 This project uses [ruff](https://docs.astral.sh/ruff/) to ensure consistent code formatting and linting.
+See the `scripts/lint.sh` script. This is enforced by CI.
 
 ## Test your code modification
 
