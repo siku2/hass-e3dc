@@ -35,12 +35,12 @@ jobs:
         shell: bash
         run: |
           {
-            local domain="$(yq -r -oj '.domain' custom_components/*/manifest.json)"
+            domain="$(yq -r -oj '.domain' custom_components/*/manifest.json)"
             if [ -z "$domain" ]; then
               echo >&2 "No domain found in manifest.json. Please check your custom component."
               exit 1
             fi
-            local hacs_filename="$(yq -r '.filename' hacs.json)"
+            hacs_filename="$(yq -r '.filename' hacs.json)"
             if [ -z "$hacs_filename" ]; then
               echo >&2 "No filename found in hacs.json. Please check your HACS configuration."
               exit 1
