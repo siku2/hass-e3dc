@@ -1,0 +1,223 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "E3/DC Konfiguration",
+                "data": {
+                    "host": "Host"
+                }
+            },
+            "discovery_confirm": {
+                "title": "E3/DC Gerät gefunden",
+                "description": "Möchten Sie das E3/DC-Gerät {name} mit Host {host} konfigurieren?"
+            }
+        },
+        "abort": {
+            "already_configured": "Gerät ist bereits konfiguriert",
+            "discovery_failed": "Erkennung fehlgeschlagen"
+        },
+        "error": {
+            "cannot_connect": "Verbindung fehlgeschlagen",
+            "not_in_sunspec_mode": "Gerät ist nicht im SunSpec-Modus."
+        }
+    },
+    "device": {
+        "hub": {
+            "name": "{title}"
+        },
+        "root_meter": {
+            "name": "{title} Hauptzähler"
+        },
+        "extra_meter": {
+            "name": "{title} Zusatz-Zähler"
+        },
+        "inverter": {
+            "name": "{title} Wechselrichter"
+        },
+        "battery": {
+            "name": "{title} Batterie"
+        }
+    },
+    "entity": {
+        "sensor": {
+            "wh_rtg": {
+                "name": "Energiekapazität"
+            },
+            "w_max_cha_rte": {
+                "name": "Maximale Ladeleistung"
+            },
+            "w_max_dis_cha_rte": {
+                "name": "Maximale Entladeleistung"
+            },
+            "soc": {
+                "name": "Ladezustand"
+            },
+            "cha_st": {
+                "name": "Ladezustand",
+                "state": {
+                    "off": "Aus",
+                    "empty": "Leer",
+                    "discharging": "Entladen",
+                    "charging": "Laden",
+                    "full": "Voll",
+                    "holding": "Halten",
+                    "testing": "Testen"
+                },
+                "state_attributes": {
+                    "options": {
+                        "state": {
+                            "off": "Aus",
+                            "empty": "Leer",
+                            "discharging": "Entladen",
+                            "charging": "Laden",
+                            "full": "Voll",
+                            "holding": "Halten",
+                            "testing": "Testen"
+                        }
+                    }
+                }
+            },
+            "loc_rem_ctl": {
+                "name": "Steuermodus",
+                "state": {
+                    "remote": "Fernsteuerung",
+                    "local": "Lokal"
+                },
+                "state_attributes": {
+                    "options": {
+                        "state": {
+                            "remote": "Fernsteuerung",
+                            "local": "Lokal"
+                        }
+                    }
+                }
+            },
+            "ph_vph_a": {
+                "name": "Spannung Phase A"
+            },
+            "ph_vph_b": {
+                "name": "Spannung Phase B"
+            },
+            "ph_vph_c": {
+                "name": "Spannung Phase C"
+            },
+            "w": {
+                "name": "Leistung"
+            },
+            "wph_a": {
+                "name": "Leistung Phase A"
+            },
+            "wph_b": {
+                "name": "Leistung Phase B"
+            },
+            "wph_c": {
+                "name": "Leistung Phase C"
+            },
+            "tot_wh_exp": {
+                "name": "Gesamtausfuhr Energie"
+            },
+            "tot_wh_exp_ph_a": {
+                "name": "Gesamtausfuhr Energie Phase A"
+            },
+            "tot_wh_exp_ph_b": {
+                "name": "Gesamtausfuhr Energie Phase B"
+            },
+            "tot_wh_exp_ph_c": {
+                "name": "Gesamtausfuhr Energie Phase C"
+            },
+            "tot_wh_imp": {
+                "name": "Gesamteinfuhr Energie"
+            },
+            "tot_wh_imp_ph_a": {
+                "name": "Gesamteinfuhr Energie Phase A"
+            },
+            "tot_wh_imp_ph_b": {
+                "name": "Gesamteinfuhr Energie Phase B"
+            },
+            "tot_wh_imp_ph_c": {
+                "name": "Gesamteinfuhr Energie Phase C"
+            },
+            "a": {
+                "name": "Strom"
+            },
+            "aph_a": {
+                "name": "Strom Phase A"
+            },
+            "aph_b": {
+                "name": "Strom Phase B"
+            },
+            "aph_c": {
+                "name": "Strom Phase C"
+            },
+            "wh": {
+                "name": "Energie"
+            },
+            "dca": {
+                "name": "DC-Strom"
+            },
+            "dcv": {
+                "name": "DC-Spannung"
+            },
+            "dcw": {
+                "name": "DC-Leistung"
+            },
+            "tmp_cab": {
+                "name": "Gehäusetemperatur"
+            },
+            "tmp_snk": {
+                "name": "Kühlkörpertemperatur"
+            },
+            "tmp_trns": {
+                "name": "Transformator-Temperatur"
+            },
+            "tmp_ot": {
+                "name": "Andere Temperatur"
+            },
+            "st": {
+                "name": "Status",
+                "state": {
+                    "off": "Aus",
+                    "sleeping": "Schlafend",
+                    "starting": "Startet",
+                    "mppt": "MPPT",
+                    "throttled": "Gedrosselt",
+                    "shutting_down": "Fährt herunter",
+                    "fault": "Fehler",
+                    "standby": "Bereitschaft"
+                },
+                "state_attributes": {
+                    "options": {
+                        "state": {
+                            "off": "Aus",
+                            "sleeping": "Schlafend",
+                            "starting": "Startet",
+                            "mppt": "MPPT",
+                            "throttled": "Gedrosselt",
+                            "shutting_down": "Fährt herunter",
+                            "fault": "Fehler",
+                            "standby": "Bereitschaft"
+                        }
+                    }
+                }
+            },
+            "con_str_ct": {
+                "name": "Anzahl verbundener Strings"
+            },
+            "max_mod_tmp": {
+                "name": "Maximale Modultemperatur"
+            },
+            "min_mod_tmp": {
+                "name": "Minimale Modultemperatur"
+            },
+            "tot_dc_cur": {
+                "name": "Gesamter DC-Strom"
+            },
+            "max_str_cur": {
+                "name": "Maximaler Stringstrom"
+            },
+            "min_str_cur": {
+                "name": "Minimaler Stringstrom"
+            }
+        }
+    }
+}
