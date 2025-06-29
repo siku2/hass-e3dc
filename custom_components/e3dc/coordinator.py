@@ -120,7 +120,9 @@ class E3dcEntity[DescT: EntityDescription](CoordinatorEntity[E3dcCoordinator]):
         )
 
         connections: set[tuple[str, str]] = set()
-        if udn := coordinator.config_entry.data.get(CONF_SSDP_UDN):
+        if device_key is None and (
+            udn := coordinator.config_entry.data.get(CONF_SSDP_UDN)
+        ):
             connections.add((CONNECTION_UPNP, str(udn)))
 
         domain_id = coordinator.config_entry.entry_id
