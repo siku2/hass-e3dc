@@ -174,18 +174,18 @@ class BatteryBase(_Model, struct=struct.Struct(">2HLH2L3HHh2H4h")):
         NO_REQUEST = 0
         START = 1
         STOP = 2
-        UNSUPPORTED = 0xFFFF
+        UNSUPPORTED = 0xFFFF  # unofficial, used by E3DC
 
     class SetOperation(enum.IntEnum):
         CONNECT = 1
         DISCONNECT = 2
-        UNSUPPORTED = 0xFFFF
+        UNSUPPORTED = 0xFFFF  # unofficial, used by E3DC
 
     class SetPcsState(enum.IntEnum):
         STOPPED = 1
         STANDBY = 2
         STARTED = 3
-        UNSUPPORTED = 0xFFFF
+        UNSUPPORTED = 0xFFFF  # unofficial, used by E3DC
 
     bat_typ: BatTyp
     bat_st: BatSt
@@ -251,12 +251,12 @@ class LithiumIonBattery(_Model, struct=struct.Struct(">5HhHhH3h4h")):
             BUTTON_PUSHED = 1
             STR_GROUND_FAULT = 2
             OUTSIDE_VOLTAGE_RANGE = 3
-            UNSUPPORTED = 0xFFFF
+            UNSUPPORTED = 0xFFFF  # unofficial, used by E3DC
 
         class SetEna(enum.IntEnum):
             ENABLE = 1
             DISABLE = 2
-            UNSUPPORTED = 0xFFFF
+            UNSUPPORTED = 0xFFFF  # unofficial, used by E3DC
 
         mod_ct: int  # not set
         soc: int  # not set
@@ -278,21 +278,21 @@ class LithiumIonBattery(_Model, struct=struct.Struct(">5HhHhH3h4h")):
             object.__setattr__(self, "con_fail", self.ConFail(self.con_fail))
             object.__setattr__(self, "set_ena", self.SetEna(self.set_ena))
 
-    b_con_str_ct: int
-    b_max_cell_vol: int  # not set
-    b_max_cell_vol_loc: int  # not set
-    b_min_cell_vol: int  # not set
-    b_min_cell_vol_loc: int  # not set
-    b_max_mod_tmp: int
-    b_max_mod_tmp_loc: int  # not set
-    b_min_mod_tmp: int
-    b_min_mod_tmp_loc: int  # not set
-    b_tot_dc_cur: int
-    b_max_str_cur: int
-    b_min_str_cur: int
-    b_cell_vol_sf: int
-    b_mod_tmp_sf: int
-    b_current_sf: int
+    con_str_ct: int
+    max_cell_vol: int  # not set
+    max_cell_vol_loc: int  # not set
+    min_cell_vol: int  # not set
+    min_cell_vol_loc: int  # not set
+    max_mod_tmp: int
+    max_mod_tmp_loc: int  # not set
+    min_mod_tmp: int
+    min_mod_tmp_loc: int  # not set
+    tot_dc_cur: int
+    max_str_cur: int
+    min_str_cur: int
+    cell_vol_sf: int
+    mod_tmp_sf: int
+    current_sf: int
     str_so_h_sf: int  # not set
 
     strings: list[String] = dataclasses.field(default_factory=list)
@@ -522,8 +522,26 @@ class E3dc:
         await client.connect()
         return cls(client)
 
+    async def is_sunspec(self) -> bool:
+        resp = await self._client.read_holding_registers(40000, count=2)
+        raw = resp.registers[0] << 16 | resp.registers[1]
+        value = raw.to_bytes(4, "big")
+        return value == b"SunS"
+
     async def read_common(self) -> Common:
         return await Common.read(self._client, 40003)
 
     async def read_storage(self) -> EnergyStorageBase:
         return await EnergyStorageBase.read(self._client, 40071)
+
+    async def read_inverter(self) -> Inverter:
+        return await Inverter.read(self._client, 40151)
+
+    async def read_lithium_ion_battery(self) -> LithiumIonBattery:
+        return await LithiumIonBattery.read(self._client, 40117)
+
+    async def read_root_meter(self) -> AbcnMeter:
+        return await AbcnMeter.read(self._client, 40203)
+
+    async def read_extra_meter(self) -> AbcnMeter:
+        return await AbcnMeter.read(self._client, 40310)

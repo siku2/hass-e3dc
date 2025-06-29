@@ -6,4 +6,4 @@ logger:
   default: info
   logs:
     custom_components.e3dc: debug
-    pymodbus: debug
+    pymodbus: info

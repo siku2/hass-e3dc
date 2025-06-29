@@ -14,27 +14,42 @@
         },
         "abort": {
             "already_configured": "Device is already configured",
-            "test_connection_failed": "Failed to connect"
+            "discovery_failed": "Discovery failed"
         },
         "error": {
-            "cannot_connect": "Failed to connect"
+            "cannot_connect": "Failed to connect",
+            "not_in_sunspec_mode": "Device is not in SunSpec mode."
+        }
+    },
+    "device": {
+        "root_meter": {
+            "name": "{title} Root Meter"
+        },
+        "extra_meter": {
+            "name": "{title} Extra Meter"
+        },
+        "inverter": {
+            "name": "{title} Inverter"
+        },
+        "battery": {
+            "name": "{title} Battery"
         }
     },
     "entity": {
         "sensor": {
-            "storage_wh_rtg": {
+            "wh_rtg": {
                 "name": "Energy Capacity"
             },
-            "storage_w_max_cha_rte": {
+            "w_max_cha_rte": {
                 "name": "Max Charge Rate"
             },
-            "storage_w_max_dis_cha_rte": {
+            "w_max_dis_cha_rte": {
                 "name": "Max Discharge Rate"
             },
-            "storage_soc": {
+            "soc": {
                 "name": "State of Charge"
             },
-            "storage_cha_st": {
+            "cha_st": {
                 "name": "Charge State",
                 "state": {
                     "OFF": "Off",
@@ -59,7 +74,7 @@
                     }
                 }
             },
-            "storage_loc_rem_ctl": {
+            "loc_rem_ctl": {
                 "name": "Control Mode",
                 "state": {
                     "REMOTE": "Remote",
@@ -73,6 +88,132 @@
                         }
                     }
                 }
+            },
+            "ph_vph_a": {
+                "name": "Voltage Phase A"
+            },
+            "ph_vph_b": {
+                "name": "Voltage Phase B"
+            },
+            "ph_vph_c": {
+                "name": "Voltage Phase C"
+            },
+            "w": {
+                "name": "Power"
+            },
+            "wph_a": {
+                "name": "Power Phase A"
+            },
+            "wph_b": {
+                "name": "Power Phase B"
+            },
+            "wph_c": {
+                "name": "Power Phase C"
+            },
+            "tot_wh_exp": {
+                "name": "Total Energy Exported"
+            },
+            "tot_wh_exp_ph_a": {
+                "name": "Total Energy Exported Phase A"
+            },
+            "tot_wh_exp_ph_b": {
+                "name": "Total Energy Exported Phase B"
+            },
+            "tot_wh_exp_ph_c": {
+                "name": "Total Energy Exported Phase C"
+            },
+            "tot_wh_imp": {
+                "name": "Total Energy Imported"
+            },
+            "tot_wh_imp_ph_a": {
+                "name": "Total Energy Imported Phase A"
+            },
+            "tot_wh_imp_ph_b": {
+                "name": "Total Energy Imported Phase B"
+            },
+            "tot_wh_imp_ph_c": {
+                "name": "Total Energy Imported Phase C"
+            },
+            "a": {
+                "name": "Current"
+            },
+            "aph_a": {
+                "name": "Current Phase A"
+            },
+            "aph_b": {
+                "name": "Current Phase B"
+            },
+            "aph_c": {
+                "name": "Current Phase C"
+            },
+            "wh": {
+                "name": "Energy"
+            },
+            "dca": {
+                "name": "DC Current"
+            },
+            "dcv": {
+                "name": "DC Voltage"
+            },
+            "dcw": {
+                "name": "DC Power"
+            },
+            "tmp_cab": {
+                "name": "Cabinet Temperature"
+            },
+            "tmp_snk": {
+                "name": "Heat Sink Temperature"
+            },
+            "tmp_trns": {
+                "name": "Transformer Temperature"
+            },
+            "tmp_ot": {
+                "name": "Other Temperature"
+            },
+            "st": {
+                "name": "State",
+                "state": {
+                    "OFF": "Off",
+                    "SLEEPING": "Sleeping",
+                    "STARTING": "Starting",
+                    "MPPT": "MPPT",
+                    "THROTTLED": "Throttled",
+                    "SHUTTING_DOWN": "Shutting Down",
+                    "FAULT": "Fault",
+                    "STANDBY": "Standby"
+                },
+                "state_attributes": {
+                    "options": {
+                        "state": {
+                            "OFF": "Off",
+                            "SLEEPING": "Sleeping",
+                            "STARTING": "Starting",
+                            "MPPT": "MPPT",
+                            "THROTTLED": "Throttled",
+                            "SHUTTING_DOWN": "Shutting Down",
+                            "FAULT": "Fault",
+                            "STANDBY": "Standby"
+                        }
+                    }
+                }
+            },
+            "con_str_ct": {
+                "name": "Connected String Count"
+            },
+            "max_mod_tmp": {
+                "name": "Max Module Temperature"
+            },
+            "min_mod_tmp": {
+                "name": "Min Module Temperature"
+            },
+            "tot_dc_cur": {
+                "name": "Total DC Current"
+            },
+            "max_str_cur": {
+                "name": "Max String Current"
+            },
+            "min_str_cur": {
+                "name": "Min String Current"
             }
         }
     }
