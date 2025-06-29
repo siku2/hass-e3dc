@@ -22,6 +22,9 @@
         }
     },
     "device": {
+        "hub": {
+            "name": "{title}"
+        },
         "root_meter": {
             "name": "{title} Root Meter"
         },

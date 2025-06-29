@@ -135,7 +135,7 @@ class E3dcEntity[DescT: EntityDescription](CoordinatorEntity[E3dcCoordinator]):
             manufacturer=coordinator.common.manufacturer,
             model=coordinator.common.options if device_key is None else None,
             connections=connections,
-            translation_key=device_key,
+            translation_key="hub" if device_key is None else None,
             translation_placeholders={
                 "title": coordinator.config_entry.title,
             },
