@@ -52,24 +52,24 @@
             "cha_st": {
                 "name": "Charge State",
                 "state": {
-                    "OFF": "Off",
-                    "EMPTY": "Empty",
-                    "DISCHARGING": "Discharging",
-                    "CHARGING": "Charging",
-                    "FULL": "Full",
-                    "HOLDING": "Holding",
-                    "TESTING": "Testing"
+                    "off": "Off",
+                    "empty": "Empty",
+                    "discharging": "Discharging",
+                    "charging": "Charging",
+                    "full": "Full",
+                    "holding": "Holding",
+                    "testing": "Testing"
                 },
                 "state_attributes": {
                     "options": {
                         "state": {
-                            "OFF": "Off",
-                            "EMPTY": "Empty",
-                            "DISCHARGING": "Discharging",
-                            "CHARGING": "Charging",
-                            "FULL": "Full",
-                            "HOLDING": "Holding",
-                            "TESTING": "Testing"
+                            "off": "Off",
+                            "empty": "Empty",
+                            "discharging": "Discharging",
+                            "charging": "Charging",
+                            "full": "Full",
+                            "holding": "Holding",
+                            "testing": "Testing"
                         }
                     }
                 }
@@ -77,14 +77,14 @@
             "loc_rem_ctl": {
                 "name": "Control Mode",
                 "state": {
-                    "REMOTE": "Remote",
-                    "LOCAL": "Local"
+                    "remote": "Remote",
+                    "local": "Local"
                 },
                 "state_attributes": {
                     "options": {
                         "state": {
-                            "REMOTE": "Remote",
-                            "LOCAL": "Local"
+                            "remote": "Remote",
+                            "local": "Local"
                         }
                     }
                 }
@@ -173,26 +173,26 @@
             "st": {
                 "name": "State",
                 "state": {
-                    "OFF": "Off",
-                    "SLEEPING": "Sleeping",
-                    "STARTING": "Starting",
-                    "MPPT": "MPPT",
-                    "THROTTLED": "Throttled",
-                    "SHUTTING_DOWN": "Shutting Down",
-                    "FAULT": "Fault",
-                    "STANDBY": "Standby"
+                    "off": "Off",
+                    "sleeping": "Sleeping",
+                    "starting": "Starting",
+                    "mppt": "MPPT",
+                    "throttled": "Throttled",
+                    "shutting_down": "Shutting Down",
+                    "fault": "Fault",
+                    "standby": "Standby"
                 },
                 "state_attributes": {
                     "options": {
                         "state": {
-                            "OFF": "Off",
-                            "SLEEPING": "Sleeping",
-                            "STARTING": "Starting",
-                            "MPPT": "MPPT",
-                            "THROTTLED": "Throttled",
-                            "SHUTTING_DOWN": "Shutting Down",
-                            "FAULT": "Fault",
-                            "STANDBY": "Standby"
+                            "off": "Off",
+                            "sleeping": "Sleeping",
+                            "starting": "Starting",
+                            "mppt": "MPPT",
+                            "throttled": "Throttled",
+                            "shutting_down": "Shutting Down",
+                            "fault": "Fault",
+                            "standby": "Standby"
                         }
                     }
                 }
