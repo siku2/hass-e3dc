@@ -74,11 +74,11 @@ jobs:
         uses: orhun/git-cliff-action@v4
         id: git-cliff
         with:
-          args: --verbose --unreleased --strip=header
+          config: ""
+          args: --verbose --unreleased --strip=header --config-url=https://raw.githubusercontent.com/orhun/git-cliff/refs/heads/main/examples/github.toml
         env:
           GITHUB_REPO: ${{ github.repository }}
           GIT_CLIFF_TAG: ${{ steps.info.outputs.tag_name }}
-          GIT_CLIFF_CONFIG_URL: https://raw.githubusercontent.com/orhun/git-cliff/refs/heads/main/examples/github.toml
 
   release:
     needs: prepare
