@@ -64,13 +64,13 @@ _STORAGE_SENSORS = [
         key="cha_st",
         value_fn=lambda e3dc: e3dc.storage.cha_st.name.lower(),
         device_class=SensorDeviceClass.ENUM,
-        options=sunspec.EnergyStorageBase.ChaSt._member_names_,
+        options=[v.name.lower() for v in sunspec.EnergyStorageBase.ChaSt],
     ),
     E3dcSensorEntityDescription(
         key="loc_rem_ctl",
         value_fn=lambda e3dc: e3dc.storage.loc_rem_ctl.name.lower(),
         device_class=SensorDeviceClass.ENUM,
-        options=sunspec.EnergyStorageBase.LocRemCtl._member_names_,
+        options=[v.name.lower() for v in sunspec.EnergyStorageBase.LocRemCtl],
     ),
 ]
 
@@ -192,7 +192,7 @@ _INVERTER_SENSORS = [
         key="st",
         value_fn=lambda e3dc: e3dc.inverter.st.name.lower(),
         device_class=SensorDeviceClass.ENUM,
-        options=sunspec.Inverter.St._member_names_,
+        options=[v.name.lower() for v in sunspec.Inverter.St],
     ),
 ]
 
