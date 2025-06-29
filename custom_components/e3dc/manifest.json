@@ -21,7 +21,11 @@
     "requirements": [
         "pymodbus"
     ],
-    "ssdp": [],
+    "ssdp": [
+        {
+            "manufacturer": "E3DC"
+        }
+    ],
     "usb": [],
     "version": "0.0.0",
     "zeroconf": []
