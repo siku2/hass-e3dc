@@ -8,6 +8,12 @@
 
 Home Assistant integration for the E3/DC S10 devices.
 
+> [!IMPORTANT]
+> I created this integration to use the sunspec interface of the E3/DC S10 devices.
+> Later I found out about their proprietary "RCSP" protocol, which allows for more control. Please check out the integration here: https://github.com/torbennehmer/hacs-e3dc
+>
+> This integration works, but I'm not actively using it myself or maintaining it.
+
 ## Installation
 
 1. Make sure you have [HACS](https://hacs.xyz) installed.
